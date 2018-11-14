@@ -1,5 +1,5 @@
 {
-  "name": "music-bot",
+  "name": "UsManBot",
   "version": "1.0.0",
   "dependencies": {
     "discord.js": "github:discordjs/discord.js",
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YoussefElshemi/Music-Bot.git"
+    "url": "git+https://github.com/YoussefElshemi/UsManBot.git"
   },
   "bugs": {
-    "url": "https://github.com/YoussefElshemi/Music-Bot/issues"
+    "url": "https://github.com/YoussefElshemi/UsManBot/issues"
   },
-  "homepage": "https://github.com/YoussefElshemi/Music-Bot#readme",
+  "homepage": "https://github.com/YoussefElshemi/UsManBot#readme",
   "devDependencies": {
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.12.0",
