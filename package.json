@@ -6,9 +6,11 @@
     "enmap": "^2.5.2",
     "enmap-sqlite": "^2.0.1",
     "ffmpeg-binaries": "^3.2.2",
+    "moment": "^2.22.2",
     "moment-duration-format": "^2.2.2",
-    "node-opus": "^0.3.0",
+    "node-opus": "^0.3.1",
     "simple-youtube-api": "^5.1.1",
+    "snekfetch": "^4.0.4",
     "sqlite": "^2.9.2",
     "ytdl-core": "^0.20.4"
   },
