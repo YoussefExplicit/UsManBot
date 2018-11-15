@@ -6,7 +6,7 @@ class Skip extends Command {
       name: 'skip',
       description: 'This command will skip a current playing song.',
       usage: 'skip',
-      aliases: ['next'],
+      aliases: ['next', 's'],
       cooldown: 5,
       category: 'Music'
     });

@@ -7,6 +7,7 @@ class Queue extends Command {
       description: 'This command will display all songs in the queue.',
       extended: 'This command will display all of the songs in the queue, if the queue is too large, it will upload the queue to hastebin, where the user could see all of the songs',
       usage: 'queue',
+      aliases: ['q'],
       cooldown: 5,
       category: 'Music'
     });
