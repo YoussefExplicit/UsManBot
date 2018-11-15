@@ -59,7 +59,6 @@ function play(guild, song) {
   const queue = guild.client.playlists;
   const serverQueue = queue.get(guild.id);
   if (!song) {
-    console.log(serverQueue.voiceChannel);
     serverQueue.voiceChannel.leave(); // if there are no songs leave the channel
     queue.delete(guild.id); // and also remove the guild from the collection
     return;
