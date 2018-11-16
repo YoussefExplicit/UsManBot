@@ -43,7 +43,7 @@ class Message extends Event {
       }
       if (cmd.category === 'Owner' && message.author.id !== ownerid) return;
       if (cmd.category === 'Administrator' && message.member.permissions.has('ADMINISTRATOR')) return;
-      if (!cmd.perms.some(c => message.member.hasPermission(c)) && !cmd.perms.length) {
+      if (!cmd.perms.some(c => message.member.hasPermission(c)) && cmd.perms.length) {
         const embed = new MessageEmbed()
           .setAuthor('Error')
           .setDescription(`You do not have permissions to execute ${cmd.name}`)
