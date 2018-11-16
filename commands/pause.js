@@ -7,7 +7,8 @@ class Pause extends Command {
       description: 'This command will pause the current playing song.',
       usage: 'pause',
       cooldown: 5,
-      category: 'Music'
+      category: 'Music',
+      perms: []
     });
   }
 

@@ -9,7 +9,8 @@ class Loop extends Command {
       usage: 'loop',
       aliases: ['unloop'],
       cooldown: 5,
-      category: 'Music'
+      category: 'Music',
+      perms: []
     });
   }
 

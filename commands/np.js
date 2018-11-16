@@ -9,7 +9,8 @@ class NP extends Command {
       usage: 'np',
       aliases: ['nowplaying', 'current'],
       cooldown: 5,
-      category: 'Music'
+      category: 'Music',
+      perms: []
     });
   }
 

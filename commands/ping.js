@@ -8,7 +8,8 @@ class Ping extends Command {
       usage: 'ping',
       aliases: ['pong'],
       cooldown: 5,
-      category: 'System'
+      category: 'System',
+      perms: []
 
     });
   }

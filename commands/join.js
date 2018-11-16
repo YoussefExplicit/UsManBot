@@ -9,8 +9,8 @@ class Join extends Command {
       usage: 'join',
       aliases: ['summon'],
       cooldown: 5,
-      category: 'Music'
-
+      category: 'Music',
+      perms: []
     });
   }
 

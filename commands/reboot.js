@@ -10,7 +10,8 @@ class Reboot extends Command {
       usage: 'reboot',
       aliases: ['restart'],
       cooldown: 0,
-      category: 'Owner'
+      category: 'Owner',
+      perms: []
     });
   }
 

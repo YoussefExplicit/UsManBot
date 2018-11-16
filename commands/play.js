@@ -13,7 +13,8 @@ class Play extends Command {
       description: 'This command plays a song using the bot',
       cooldown: 1,
       extended: 'This command plays a song from youtube using the bot, but you must be in the voice call to use this',
-      category: 'Music'
+      category: 'Music',
+      perms: []
     });
   }
 

@@ -9,7 +9,7 @@ class Kick extends Command {
   constructor(client) {
     super(client, {
       name: 'kick',
-      description: 'This command will get the ping of the client',
+      description: 'This command will kick the user mentioned',
       usage: 'kick <mention> [reason]',
       cooldown: 5,
       category: 'Moderation',
@@ -24,7 +24,7 @@ class Kick extends Command {
         .setAuthor('Error')
         .setDescription('You must mention someone to kick.')
         .setColor(message.guild.member(this.client.user.id).roles.highest.color || 0x00AE86);
-      message.channel.send(noMentionEmbed);
+      return message.channel.send(noMentionEmbed);
     }
     parseUser(message, member.user);
     const modlog = message.guild.channels.find(entry => entry.name === 'mod_log');

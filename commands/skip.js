@@ -8,7 +8,8 @@ class Skip extends Command {
       usage: 'skip',
       aliases: ['next', 's'],
       cooldown: 5,
-      category: 'Music'
+      category: 'Music',
+      perms: []
     });
   }
 

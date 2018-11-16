@@ -48,7 +48,7 @@ class Message extends Event {
           .setAuthor('Error')
           .setDescription(`You do not have permissions to execute ${cmd.name}`)
           .setColor(message.guild.member(this.client.user.id).roles.highest.color || 0x00AE86);
-        message.channel.send(embed);
+        return message.channel.send(embed);
       }
 
       this.client.log(`CMD RUN: ${message.author.tag} (${message.author.id}) used command: ${cmd.name}`);

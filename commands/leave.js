@@ -9,7 +9,8 @@ class Leave extends Command {
       usage: 'leave',
       aliases: ['unsummon'],
       cooldown: 5,
-      category: 'Music'
+      category: 'Music',
+      perms: []
     });
   }
 
