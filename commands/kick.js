@@ -1,8 +1,8 @@
 const { MessageEmbed } = require('discord.js');
 
 const Command = require('../util/Command.js');
-const caseNumber = require('../util/caseNumber.js');
-const parseUser = require('../util/parseUser.js');
+const caseNumber = require('../util/CaseNumber.js');
+const parseUser = require('../util/ParseUser.js');
 
 
 class Kick extends Command {
