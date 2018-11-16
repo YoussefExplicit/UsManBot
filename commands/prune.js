@@ -9,7 +9,8 @@ class Prune extends Command {
       usage: 'prune [mention] <number>',
       aliases: ['purge, delete'],
       cooldown: 0,
-      category: 'Moderation'
+      category: 'Moderation',
+      perms: ['MANAGE_MESSAGES']
     });
   }
 
