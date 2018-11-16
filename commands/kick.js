@@ -12,7 +12,8 @@ class Kick extends Command {
       description: 'This command will get the ping of the client',
       usage: 'kick <mention> [reason]',
       cooldown: 5,
-      category: 'Moderation'
+      category: 'Moderation',
+      perms: ['KICK_MEMBERS']
     });
   }
 

@@ -17,6 +17,8 @@ module.exports = class Command {
 
     this.cooldown = options.cooldown || 3;
 
+    this.perms = options.perms || [];
+
   }
 
   reload() {
