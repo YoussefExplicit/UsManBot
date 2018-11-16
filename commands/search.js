@@ -14,8 +14,7 @@ class Search extends Command {
       extended: 'This command will allow a user to choose from a selection of songs with a search phrase, limitting to 10 results',
       usage: 'search <song-name>',
       cooldown: 2,
-      category: 'Music',
-      perms: []
+      category: 'Music'
     });
   }
 

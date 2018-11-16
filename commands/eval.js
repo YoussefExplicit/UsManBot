@@ -11,8 +11,7 @@ class Eval extends Command {
       usage: 'eval <expression>',
       aliases: ['ev'],
       cooldown: 0,
-      category: 'Owner',
-      perms: []
+      category: 'Owner'
     });
   }
 

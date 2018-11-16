@@ -9,8 +9,7 @@ class Avatar extends Command {
       usage: 'avatar [mention]',
       aliases: ['icon', 'pfp', 'enlarge'],
       cooldown: 5,
-      category: 'System',
-      perms: []
+      category: 'System'
     });
   }
   

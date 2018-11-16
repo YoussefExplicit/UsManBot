@@ -8,8 +8,7 @@ class Stop extends Command {
       description: 'This command will stop the current playing songs and clear the queue.',
       usage: 'stop',
       cooldown: 5,
-      category: 'Music',
-      perms: []
+      category: 'Music'
     });
   }
 

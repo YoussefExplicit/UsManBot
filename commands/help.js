@@ -12,8 +12,7 @@ class Help extends Command {
       category: 'System',
       usage: 'help <category/command> [page-num]',
       cooldown: 5,
-      aliases: ['h', 'halp', 'commands'],
-      perms: []
+      aliases: ['h', 'halp', 'commands']
     });
   }
 

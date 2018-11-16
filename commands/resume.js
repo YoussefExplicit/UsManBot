@@ -8,8 +8,7 @@ class Resume extends Command {
       description: 'This command will resume the currently paused song.',
       usage: 'resume',
       cooldown: 5,
-      category: 'Music',
-      perms: []
+      category: 'Music'
     });
   }
 

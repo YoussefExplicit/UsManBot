@@ -9,8 +9,7 @@ class Queue extends Command {
       usage: 'queue',
       aliases: ['q'],
       cooldown: 5,
-      category: 'Music',
-      perms: []
+      category: 'Music'
     });
   }
 

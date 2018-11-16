@@ -11,8 +11,7 @@ class Update extends Command {
       usage: 'update',
       aliases: ['pull', 'git', 'gitpull'],
       cooldown: 0,
-      category: 'Owner',
-      perms: []
+      category: 'Owner'
     });
   }
 

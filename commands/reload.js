@@ -8,8 +8,7 @@ class Reload extends Command {
       usage: 'r <command>',
       aliases: ['r'],
       cooldown: 0,
-      category: 'Owner',
-      perms: []
+      category: 'Owner'
     });
   }
 

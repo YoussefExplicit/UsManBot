@@ -8,8 +8,7 @@ class Volume extends Command {
       description: 'This command will set the volume of the songs.',
       usage: 'volume [number]',
       cooldown: 5,
-      category: 'Music',
-      perms: []
+      category: 'Music'
     });
   }
 

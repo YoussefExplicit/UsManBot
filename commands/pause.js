@@ -8,7 +8,6 @@ class Pause extends Command {
       usage: 'pause',
       cooldown: 5,
       category: 'Music',
-      perms: []
     });
   }
 
