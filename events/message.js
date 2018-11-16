@@ -46,7 +46,7 @@ class Message extends Event {
       if (cmd.perms.length && !message.member.permissions.has(cmd.perms)) {
         const embed = new MessageEmbed()
           .setAuthor('Error')
-          .setDescription(`You do not have permissions to execute ${cmd.name}`)
+          .setDescription(`You do not have permissions to execute \`${cmd.name}\``)
           .setColor(message.guild.member(this.client.user.id).roles.highest.color || 0x00AE86);
         return message.channel.send(embed);
       }
