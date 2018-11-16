@@ -43,7 +43,13 @@ class Message extends Event {
       }
       if (cmd.category === 'Owner' && message.author.id !== ownerid) return;
       if (cmd.category === 'Administrator' && message.member.permissions.has('ADMINISTRATOR')) return;
-      if (!cmd.perms.some(c => message.member.hasPermission(c))) return message.channel.send('You don\'t have permissions to execute this command');
+      if (!cmd.perms.some(c => message.member.hasPermission(c))) {
+        const embed = new MessageEmbed()
+          .setAuthor('Error')
+          .setDescription(`You do not have permissions to execute ${cmd.name}`)
+          .setColor(message.guild.member(this.client.user.id).roles.highest.color || 0x00AE86);
+        message.channel.send(embed);
+      }
 
       this.client.log(`CMD RUN: ${message.author.tag} (${message.author.id}) used command: ${cmd.name}`);
       await cmd.run(message, args);
