@@ -1,4 +1,5 @@
 const Event = require('../util/Event');
+const Discord = require('discord.js');
 
 class GuildMemberAdd extends Event {
   constructor(...args) {
