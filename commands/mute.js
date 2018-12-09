@@ -5,7 +5,7 @@ const caseNumber = require('../util/CaseNumber.js');
 const parseUser = require('../util/ParseUser.js');
 
 
-class Ban extends Command {
+class Mute extends Command {
   constructor(client) {
     super(client, {
       name: 'mute',
