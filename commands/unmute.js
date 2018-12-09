@@ -8,9 +8,9 @@ const parseUser = require('../util/ParseUser.js');
 class Ban extends Command {
   constructor(client) {
     super(client, {
-      name: 'mute',
-      description: 'This command will mute the user mentioned',
-      usage: 'mute <mention> [reason]',
+      name: 'unmute',
+      description: 'This command will unmute the user mentioned',
+      usage: 'unmute <mention> [reason]',
       cooldown: 5,
       category: 'Moderation',
       perms: ['MUTE_MEMBERS']
@@ -22,7 +22,7 @@ class Ban extends Command {
     if (!member) {
       const noMentionEmbed = new MessageEmbed()
         .setAuthor('Error')
-        .setDescription('You must mention someone to mute.')
+        .setDescription('You must mention someone to unmute.')
         .setColor(message.guild.member(this.client.user.id).roles.highest.color || 0x00AE86);
       return message.channel.send(noMentionEmbed);
     }
@@ -33,35 +33,16 @@ class Ban extends Command {
     const embed = new MessageEmbed()
       .setColor(message.guild.member(this.client.user.id).roles.highest.color || 0x00AE86)
       .setTimestamp()
-      .setDescription(`**Action:** Mute\n**Target:** ${member.user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`)
+      .setDescription(`**Action:** Unmute\n**Target:** ${member.user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`)
       .setFooter(`Case ${caseNum}`);
 
     if (member.roles.highest.position >= message.member.roles.highest.position) return;
     
     let role = message.guild.roles.find(c => c.name === 'muted');
-    if (!role) {
-      role = await message.guild.roles.create({
-        data: {
-          name: 'muted',
-          color: 'BROWN'
-        }
-      });
-      message.channels.forEach(async d => {
-        await d.overwritePermissions({
-          permissionOverwrites: [
-            {
-              id: role.id,
-              deny: ['SEND_MESSAGES']
-            }
-          ]
-        })
-      });
-    }
-
-    await member.roles.add(role);
+    await member.roles.remove(role);
 
     modlog.send(embed);
   }
 }
 
-module.exports = Mute;
+module.exports = Unmute;
