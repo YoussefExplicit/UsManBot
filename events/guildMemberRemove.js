@@ -8,8 +8,6 @@ class GuildMemberRemove extends Event {
   run(member) {
     console.log(`Member ${member.displayName} left ${member.guild.name}`)
     if (member.guild.id === '311483608697274379') {
-      const role = member.guild.roles.get('358670733951369217');
-      member.roles.add(role);
       const channel = member.guild.roles.get('385495604995817472');
 
       const embed = new Discord.MessageEmbed()
