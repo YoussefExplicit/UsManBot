@@ -44,7 +44,7 @@ class Ban extends Command {
       .setColor(message.guild.member(this.client.user.id).roles.highest.color || 0x00AE86);
     await message.channel.send(questionEmbed);
 
-    const filter = m => ['y', 'yes', 'n', 'no'].includes(m.content.toLowerCase());
+    const filter = m => ['y', 'yes', 'n', 'no'].includes(m.content.toLowerCase()) && m.author.id === message.author.id;
     await message.channel.awaitMessages(filter, {
       max: 1,
       time: 30000,
@@ -73,7 +73,6 @@ class Ban extends Command {
         .setColor(message.guild.member(this.client.user.id).roles.highest.color || 0x00AE86);
       await message.channel.send(timeError);
     });
-    modlog.send(embed);
   }
 }
 
